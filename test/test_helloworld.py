@@ -6,7 +6,7 @@ from src.helloworld import write_helloworld
 
 
 def test_default():
-    """Empty test."""
+    """Test hello world funciton."""
     with tempfile.TemporaryDirectory() as tmpdir:
         file = os.path.join(tmpdir, "helloworld")
 
