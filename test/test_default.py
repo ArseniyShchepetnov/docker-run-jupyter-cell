@@ -2,4 +2,5 @@
 
 
 def test_default():
+    """Empty test."""
     assert True
