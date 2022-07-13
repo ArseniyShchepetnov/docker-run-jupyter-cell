@@ -6,16 +6,16 @@ from src.python_source import get_function_source
 
 def test_get_ordinary_function():
     """Test function source code extraction."""
-    def func(a: int = 100) -> int:
-        if a > 100:
+    def func(arg: int = 100) -> int:
+        if arg > 100:
             result = 0
         else:
             result = 1
         return result
 
     reference_code = (
-        "def func(a: int = 100) -> int:\n"
-        "    if a > 100:\n"
+        "def func(arg: int = 100) -> int:\n"
+        "    if arg > 100:\n"
         "        result = 0\n"
         "    else:\n"
         "        result = 1\n"
@@ -33,16 +33,16 @@ def test_get_function_code_no_decorators():
         return arg
 
     @decorator
-    def func(a: int = 100) -> int:
-        if a > 100:
+    def func(arg: int = 100) -> int:
+        if arg > 100:
             result = 0
         else:
             result = 1
         return result
 
     reference_code = (
-        "def func(a: int = 100) -> int:\n"
-        "    if a > 100:\n"
+        "def func(arg: int = 100) -> int:\n"
+        "    if arg > 100:\n"
         "        result = 0\n"
         "    else:\n"
         "        result = 1\n"
